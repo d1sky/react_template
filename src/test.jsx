@@ -5,6 +5,7 @@ class Test extends React.Component {
         return (
             <div>
                 ReactJS Template
+                <button class="button is-success">Success</button>
             </div>
         )
     }
