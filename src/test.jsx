@@ -1,11 +1,11 @@
 import React from 'react';
+import { Button } from 'reactbulma';
 
 class Test extends React.Component {
     render() {
         return (
             <div>
-                ReactJS Template
-                <button class="button is-success">Success</button>
+                <Button success>Success</Button>
             </div>
         )
     }
