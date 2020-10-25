@@ -11,6 +11,6 @@ export default {
             type: "image",
             data: "",
             confluenceIsWrapped: false
-        },
+        }        
     ]
 }

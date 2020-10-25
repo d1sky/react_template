@@ -1,6 +1,5 @@
 import React from 'react';
-import Block from './block.jsx';
-import { Card, Content, Container, Button } from 'reactbulma';
+import { Button } from 'reactbulma';
 
 class BlockMenu extends React.Component {
     constructor(props) {
