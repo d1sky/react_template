@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from './image.jsx';
+import Image from './blocks/image.jsx';
 import { Card, Content } from 'reactbulma';
 
 class Block extends React.Component {
