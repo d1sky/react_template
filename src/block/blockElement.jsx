@@ -17,16 +17,16 @@ class BlockElement extends React.Component {
     
 
     render() {
-        const block = this.state.block;
+        const block = this.props.block;
         return (
             <Box style={{padding: 0}}>
-                <Card key={block.index}>
+                <Card>
                     <Card.Header>
                         <Card.Header.Title>
                             {block.name}
                         </Card.Header.Title>
                         <Card.Header.Icon>
-                            <Delete />
+                            <Delete onClick={this.props.delete} />
                         </Card.Header.Icon>
                     </Card.Header>
                     <Card.Content>

@@ -1,16 +1,18 @@
 export default {
     BLOCK_LIST: [
         {
-            name: "Название пользовательского блока",
+            name: "Текстовый блок",
             type: "text",
+            name: "",
             data: "",
             confluenceIsWrapped: false
         },
         {
-            name: "Название пользовательского блока",
+            name: "Изображение",
             type: "image",
             data: "",
+            description: "",
             confluenceIsWrapped: false
-        }        
+        }
     ]
 }
