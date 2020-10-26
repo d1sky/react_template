@@ -14,7 +14,6 @@ class BlockElement extends React.Component {
                 }
             }
         }
-    
 
     render() {
         const block = this.props.block;

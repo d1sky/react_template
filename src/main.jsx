@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Tabs } from 'reactbulma';
 import BlockElement from './block/blockElement.jsx';
-import BlockMenu from './template/blockMenu.jsx';
+import Template  from './Template/TemplateForm.jsx';
+// import Template from './template/template.jsx';
 import Image from './block/blockTypes/image.jsx';
 import Text from './block/blockTypes/text.jsx';
 
@@ -37,7 +38,6 @@ class Main extends React.Component {
     }
 
     render() {
-        const blockList = this.state.blockList
         const listItems = this.state.blockList.map((block, index) =>
             <BlockElement
                 block={{
@@ -57,11 +57,11 @@ class Main extends React.Component {
                         <li><a>Блок</a></li>
                     </ul>
                 </Tabs>
-                <BlockMenu
+                {listItems}
+                <Template
                     addImage={() => this.handleAddImage()}
                     addText={() => this.handleAddText()}
                 />
-                {listItems}
             </Container>
         )
     }
