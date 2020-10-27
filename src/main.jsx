@@ -1,16 +1,16 @@
 import React from 'react';
-import { Container, Tabs } from 'reactbulma';
-import BlockElement from './block/blockElement.jsx';
-import Template  from './Template/TemplateForm.jsx';
-// import Template from './template/template.jsx';
-import Image from './block/blockTypes/image.jsx';
-import Text from './block/blockTypes/text.jsx';
+import { Box, Container, Tabs } from 'reactbulma';
+import BlockElement from './Block/BlockElement.jsx';
+import TemplateForm from './Template/TemplateForm.jsx';;
+import Image from './Block/BlockTypes/Image.jsx';
+import Text from './Block/BlockTypes/Text.jsx';
 
 class Main extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            blockList: []
+            blockList: [],
+            displayTemplateList: true
         }
     }
 
@@ -28,6 +28,10 @@ class Main extends React.Component {
         blockList.push({ id: blockList.length + 1, name: "Текстовой блок", type: "text", description: "" })
         this.setState({ blockList })
         console.log(blockList);
+    };
+
+    createNewTemplate() {
+        this.setState({ displayTemplateList: false });
     };
 
     handleDeleteBlock(blockId) {
@@ -52,16 +56,21 @@ class Main extends React.Component {
             <Container>
                 <Tabs>
                     <ul>
-                        <li><a>Отчёт</a></li>
-                        <li className="is-active"><a>Шаблон</a></li>
-                        <li><a>Блок</a></li>
+                        <li><a>Протоколы</a></li>
+                        <li className="is-active"><a>Шаблоны</a></li>
+                        <li><a>Блоки</a></li>
                     </ul>
                 </Tabs>
-                {listItems}
-                <Template
+                <TemplateForm
+                    visible={this.state.displayTemplateList}
                     addImage={() => this.handleAddImage()}
                     addText={() => this.handleAddText()}
+                    createNewTemplate={() => this.createNewTemplate()}
                 />
+
+                {listItems}
+
+
             </Container>
         )
     }

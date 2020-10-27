@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from './blockTypes/image.jsx';
-import Text from './blockTypes/text.jsx';
+import Image from './BlockTypes/Image.jsx';
+import Text from './BlockTypes/Text.jsx';
 import { Card, Delete, Content, Box } from 'reactbulma';
 
 
