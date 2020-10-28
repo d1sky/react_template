@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Box, Panel, Control, Input, Icon } from 'reactbulma';
+import { Box, Panel, Control, Input, Icon } from 'reactbulma';
+import Button from 'reactbulma/lib/components/Button/Button';
 
 class TemplateList extends React.Component {
     constructor(props) {
@@ -22,10 +23,10 @@ class TemplateList extends React.Component {
                     </Control>
                 </Panel.Block>
                 <Panel.Block active>
-                    Тестовый шаблон 1
+                <Button><Icon small><i className="fa fa-pencil-square-o"/></Icon></Button> Тестовый шаблон 1
                 </Panel.Block>
                 <Panel.Block>
-                    Тестовый шаблон 2
+                <Button><Icon small><i className="fa fa-pencil-square-o"/></Icon></Button>  Тестовый шаблон 2
                 </Panel.Block>
             </Panel>
         )

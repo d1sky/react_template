@@ -59,6 +59,7 @@ class Main extends React.Component {
                         <li><a>Протоколы</a></li>
                         <li className="is-active"><a>Шаблоны</a></li>
                         <li><a>Блоки</a></li>
+                        <li><a>Архив</a></li>
                     </ul>
                 </Tabs>
                 <TemplateForm
@@ -67,9 +68,9 @@ class Main extends React.Component {
                     addText={() => this.handleAddText()}
                     createNewTemplate={() => this.createNewTemplate()}
                 />
-
-                {listItems}
-
+                <Container className="has-margin-top-4">
+                    {listItems}
+                </Container>
 
             </Container>
         )
